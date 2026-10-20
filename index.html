@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kai Studios | Game Design &amp; Development Portfolio</title>
+<meta name="description" content="Portfolio of Kairav Naicker: game designer, project manager and audio designer. Mzansi Rush, Rat Attack, Scuba Defense and Peer Pressure.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#050816;--panel:#0d1440;--line:#2b3980;--tx:#e8efff;--mut:#9fb0e6;--ac:#5fd0ff;--ac2:#8f7bff;--on:#04112b;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;color:var(--tx);font:17px/1.65 "DM Sans","Segoe UI",system-ui,sans-serif;overflow-x:hidden;background:radial-gradient(1.5px 1.5px at 25px 35px,#fff,transparent),radial-gradient(1px 1px at 110px 90px,#9fd8ff,transparent),radial-gradient(1.2px 1.2px at 70px 130px,#fff,transparent),radial-gradient(ellipse at 12% 0%,#2d2088 0%,transparent 55%),radial-gradient(ellipse at 92% 28%,#0f3d94 0%,transparent 50%),var(--bg);background-size:150px 150px,190px 190px,230px 230px,auto,auto,auto;background-attachment:scroll}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",sans-serif;line-height:1.08;margin:0 0 .5em;text-shadow:0 0 28px rgba(95,208,255,.25)}
+h1{font-size:clamp(2.4rem,7vw,4.4rem)}h2{font-size:clamp(1.7rem,4vw,2.4rem)}h3{font-size:1.25rem}
+p{margin:0 0 .8em}a{color:var(--ac)}a:hover{color:#fff}img{max-width:100%}
+:focus-visible{outline:3px solid var(--ac2);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px}.skip:focus{left:8px;z-index:99;background:var(--ac);color:var(--on);padding:8px 14px;border-radius:8px}
+header{position:sticky;top:0;z-index:20;background:rgba(5,8,22,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:66px;gap:12px}
+.logo{font:800 1.25rem "Bricolage Grotesque",sans-serif;color:var(--tx);text-decoration:none}.logo span{color:var(--ac)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{color:var(--tx);text-decoration:none;padding:8px 13px;border-radius:999px;font-weight:600;font-size:.95rem;display:block}
+nav a:hover{background:var(--panel);color:var(--ac)}nav a.cv{border:2px solid var(--ac);color:var(--ac)}
+#burger{display:none;background:var(--panel);color:var(--tx);border:2px solid var(--line);border-radius:10px;padding:8px 14px;font:inherit;cursor:pointer}
+@media(max-width:860px){#burger{display:block}nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:2px solid var(--line);padding:10px 24px}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}}
+section{padding:60px 0}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--on);font-weight:800;padding:13px 24px;border-radius:14px;border:2px solid transparent;text-decoration:none;cursor:pointer;font:inherit;font-weight:800;box-shadow:0 4px 0 #3a2fb3;transition:transform .15s,filter .15s}
+.btn:hover{color:var(--on);filter:brightness(1.12);transform:translateY(-2px)}.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #3a2fb3}
+.btn.s{background:transparent;color:var(--tx);border-color:var(--line);box-shadow:none}.btn.s:hover{color:var(--ac);border-color:var(--ac)}
+.btn.sm{padding:8px 14px;font-size:.85rem}
+.eyebrow{color:var(--ac);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;margin-bottom:14px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding-top:56px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hero h1 em{font-style:normal;color:var(--ac)}.hero p{font-weight:600}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.frame{border:2px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg);box-shadow:0 16px 50px rgba(30,40,160,.45)}
+.frame img{display:block;width:100%;height:auto}
+.hero .frame{animation:bob 6s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 36px rgba(30,40,160,.4);transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--ac)}
+.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:var(--bg);border-bottom:2px solid var(--line)}
+.card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card p{color:var(--mut);font-size:.95rem;margin:0}.card .btn{margin-top:auto;text-align:center}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.8rem;color:var(--mut);background:var(--panel)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:start}
+.pn{background:var(--panel);border:2px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 30px rgba(30,40,160,.3)}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:10px}
+.sw div{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px;background:#0a1030;border:1.5px solid var(--line);border-radius:12px;font-size:.78rem;font-weight:600;text-align:center;line-height:1.2}
+.sw img{width:44px;height:44px;border-radius:10px;object-fit:contain}
+.back{display:inline-block;margin:28px 0 16px;font-weight:700}
+.ph{padding:26px 28px;border-top:2px solid var(--line)}
+.team{color:var(--mut);margin:12px 0 0}
+.vid{position:relative;display:block;border-radius:16px;overflow:hidden;border:2px solid var(--line);aspect-ratio:16/9;background:#000;box-shadow:0 12px 40px rgba(30,40,160,.4)}
+.vid img,.vid iframe{width:100%;height:100%;border:0;object-fit:cover;display:block}
+.play{all:unset;cursor:pointer;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,8,22,.25)}
+.play span{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--on);display:flex;align-items:center;justify-content:center;font-size:30px;padding-left:6px}
+.split{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.split>:first-child{flex:1 1 460px}
+.qr{width:140px;height:140px;border-radius:12px;border:2px solid var(--line);background:#fff;image-rendering:pixelated}
+.sec h2{display:flex;align-items:center;gap:10px}
+footer{border-top:2px solid var(--line);padding:30px 0;color:var(--mut);text-align:center;font-size:.9rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap bar">
+<a class="logo" href="#home">Kai Studios<span>.</span></a>
+<button id="burger" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+<nav id="nav" aria-label="Main"><ul>
+<li><a href="#home">Home</a></li><li><a href="#about">About Me</a></li><li><a href="#projects">Projects</a></li><li><a href="#software">Software</a></li><li><a href="#contact">Contact</a></li>
+<li><a class="cv" href="cv/CV_Kairav_Naicker.pdf" download>Download CV</a></li></ul></nav></div></header>
+<main id="main" class="wrap"></main>
+<footer><div class="wrap">© <span id="yr"></span> Kai Studios · Kairav Naicker · Game Design &amp; Development</div></footer>
+<script>
+/* ===== EDIT CONTENT HERE (each game is one entry) ===== */
+const SITE={"traits": "Game Designer · Project Manager · Audio Designer", "greeting": "Greetings !!!<br><br>I’m <em>Kai</em>", "intro1": "I’m a Game Design student passionate about bringing ideas to life through creativity, leadership, and collaboration. I enjoy shaping project visions, managing teams, and guiding projects from concept to completion.", "intro2": "I’m especially interested in creating educational games that address real-world issues, such as peer pressure, substance abuse, and food safety, using interactive gameplay to raise awareness and encourage positive change.", "cv": "cv/CV_Kairav_Naicker.pdf", "email": "naickerkd@gmail.com", "phone": "067 038 2218", "linktree": "https://linktr.ee/kairavnaicker", "linkedin": "https://www.linkedin.com/in/kairav-naicker/"};
+const GAMES=[
+ {
+  "id": "mzansi-rush",
+  "title": "Mzansi Rush",
+  "image": "images/mzansi-rush.jpg",
+  "alt": "Mzansi Rush key art: a white minibus taxi racing through a city street under a bold yellow logo",
+  "heroTags": [
+   "Game jam",
+   "Arcade driving",
+   "PC (single-player)",
+   "3-day game jam",
+   "Unity",
+   "C#"
+  ],
+  "tags": [
+   "Arcade driving",
+   "PC (single-player)",
+   "Unity",
+   "C#"
+  ],
+  "team": "Team: Kairav Naicker · Ethan · Sooriyan",
+  "synopsis": "Players step into the shoes of a South African taxi driver hustling through vibrant city streets. Every second and fare counts as players weave through lanes, avoid potholes, pick up passengers, and race against an expiring timer. Earned fares fund upgrades like performance boosts and iconic local soundtracks, blending fast-paced arcade action with humor, resilience, and authentic Mzansi energy.",
+  "brief": "Developed during a 3-day game jam hosted by YellowDot. The brief: “Creating innovative, engaging, and culturally authentic African games”. The game gamifies South African taxi culture through fast-paced driving, time management, and upgrades. It targets local players through familiar music and cultural references, plus global gamers seeking unique arcade experiences.",
+  "role": "Role: Head Game Designer, Team Leader, Researcher, and Audio Designer. Led the creative direction and coordinated the team while researching Yellow Dot’s game jam brief, South African culture, local attractions, landmarks, road environments, and minibus taxi culture to ensure the game reflected an authentic South African identity. Also contributed to gameplay design, project documentation, team coordination, and audio design to bring the game’s vision to life.",
+  "cardRole": "Head Game Designer, Team Leader, Researcher & Audio Designer",
+  "demoUrl": "https://youtu.be/VuqAFrd9l0c",
+  "downloadUrl": "https://hypervoid01.itch.io/mzansi-rush"
+ },
+ {
+  "id": "rat-attack",
+  "title": "Rat Attack",
+  "image": "images/rat-attack.jpg",
+  "alt": "Rat Attack title screen: a low-poly chef runs through a pizzeria kitchen while rats swarm the checkered floor",
+  "heroTags": [
+   "Educational game",
+   "First-person action cooking and restaurant-management sim",
+   "PC (single-player)",
+   "Food health and safety",
+   "Unity",
+   "C#"
+  ],
+  "tags": [
+   "First-person action cooking and restaurant-management sim",
+   "PC (single-player)",
+   "Unity",
+   "C#"
+  ],
+  "team": "Team: Kairav Naicker · Ethan · Sooriyan",
+  "synopsis": "Step into the shoes of Armaan, a fresh college graduate taking over a run-down, pest-ridden local pizzeria. Under the guidance of the Old Manager, your goal is to turn this filthy eatery into a thriving 5-star destination. You slice, cook and serve pizzas, clean up filth, fend off rat swarms with pest-control tools, and ace surprise health inspections, reinvesting every cent into critical kitchen and pest-control upgrades.",
+  "brief": "Rat Attack shines a light on the real-world impact of food safety, hygiene, and pest control in restaurant environments. Tailored for teens aged 13–18, this fast-paced action-management game turns a struggling, grimy pizzeria into an interactive lesson on how poor hygiene, cross-contamination, and pest outbreaks directly affect a business and its customers.",
+  "role": "Role: Head Game Designer and Team Leader, Researcher, and Audio Designer, overseeing the game’s creative direction, coordinating the team, conducting research, and designing the audio experience.",
+  "cardRole": "Head Game Designer, Team Leader, Researcher & Audio Designer",
+  "demoUrl": "https://youtu.be/ZgdPMjUzDBs",
+  "downloadUrl": "https://hypervoid01.itch.io/rat-attack"
+ },
+ {
+  "id": "scuba-defense",
+  "title": "Scuba Defense",
+  "image": "images/scuba-defense.jpg",
+  "alt": "Scuba Defense key art: glowing title above an underwater seabed with towers, a jellyfish and a hostile fish",
+  "heroTags": [
+   "Entertainment game",
+   "First-person tower defense",
+   "PC (single-player)",
+   "Unity",
+   "C#"
+  ],
+  "tags": [
+   "First-person tower defense",
+   "PC (single-player)",
+   "Unity",
+   "C#"
+  ],
+  "team": "Team: Kairav Naicker · Ethan · Sooriyan",
+  "synopsis": "Deep beneath the ocean, a lone scuba diver guards a vital central base from waves of hostile sea creatures emerging from caves and swarming along winding paths. Armed with a pickaxe, the diver digs into the seabed to harvest ore, then converts it into towers. Every wave is tougher, and every dig reshapes the terrain, forcing players to balance mining, building and survival.",
+  "brief": "Scuba Defense is an entertainment game focused on player experience and procedural generation. Every playthrough features a unique seabed, built with 3D noise and Marching Cubes, with spline-generated enemy paths and randomly placed ore. It targets casual to mid-core strategy and tower defense players who enjoy replayability and tactical planning.",
+  "role": "Role: Head Game Designer and Team Leader, Researcher, and Audio Designer, overseeing the game’s creative direction, coordinating the team, conducting research, and designing the audio experience.",
+  "cardRole": "Head Game Designer, Team Leader, Researcher & Audio Designer",
+  "demoUrl": "https://youtu.be/IxUBI6fm_gI",
+  "downloadUrl": "https://hypervoid01.itch.io/scuba-defense"
+ },
+ {
+  "id": "peer-pressure",
+  "title": "Peer Pressure",
+  "image": "images/peer-pressure.jpg",
+  "alt": "Peer Pressure title screen: a hooded student runs down a school corridor chased by zombified students",
+  "heroTags": [
+   "Solo educational game",
+   "Wave-based survival",
+   "PC",
+   "Substance abuse",
+   "Unity",
+   "C#"
+  ],
+  "tags": [
+   "Wave-based survival",
+   "PC",
+   "Unity",
+   "C#"
+  ],
+  "team": "Solo project: Kairav Naicker (Sole developer)",
+  "synopsis": "Set in an eerie school library overrun by students consumed by addiction, Peer Pressure Survival is a 3D wave-based survival game where players must stand their ground against vaping, substance abuse, and the pressures of fitting in. Fight through waves of hostile students, resist their tempting influences, and cure your infected classmates to reclaim the school.",
+  "brief": "Driven by my passion for using games to solve real-world problems, this solo project goes beyond traditional entertainment to tackle meaningful social issues through interactive storytelling and gameplay. By turning peer pressure and substance abuse into immersive challenges, the game aims to raise awareness, encourage critical thinking, and empower players to make positive choices.",
+  "role": "As the sole developer, I was responsible for every aspect of the project, from initial research and concept development to game design, programming, and audio design. I researched real-world issues surrounding peer pressure and substance abuse, translating them into gameplay mechanics and enemy behaviours. I designed the game’s core systems, developed the wave-based survival mechanics in Unity, created the UI, and integrated audio to build an immersive atmosphere. This project allowed me to take full creative and technical ownership, bringing my vision of an educational game that addresses real-world problems to life.",
+  "cardRole": "Sole developer",
+  "demoUrl": "https://youtu.be/Q1jLf47Nevo",
+  "downloadUrl": "https://karshygamer.itch.io/peer-pressure"
+ }
+];
+const SOFT=[["Unity","logos/unity.png"],["Blender","logos/blender.png"],["C#","logos/csharp.svg"],["Audacity","logos/audacity.png"],["Android Studio","logos/android-studio.png"],["Photoshop","logos/photoshop.svg"],["DaVinci Resolve","logos/davinci-resolve.png"]];
+/* ======================================================= */
+const $=s=>document.querySelector(s),main=$("#main");
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tags=a=>`<div class="tags">${a.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>`;
+const ytId=u=>(u.match(/(?:youtu\.be\/|v=)([\w-]{6,})/)||[])[1];
+function home(){
+ main.innerHTML=`
+<section id="home" class="hero"><div>
+ <p class="eyebrow">${esc(SITE.traits)}</p>
+ <h1>${SITE.greeting}</h1>
+ <p id="about">${esc(SITE.intro1)}</p><p>${esc(SITE.intro2)}</p>
+ <div class="cta"><a class="btn" href="#projects">Explore My Projects</a><a class="btn s" href="${SITE.cv}" download>Download CV</a></div></div>
+ <div class="frame"><img src="${GAMES[0].image}" alt="${esc(GAMES[0].alt)}"></div></section>
+<section id="projects"><h2>Project Gallery</h2><div class="grid">
+${GAMES.map(g=>`<article class="card"><img src="${g.image}" alt="${esc(g.alt)}" loading="lazy"><div class="body"><h3>${esc(g.title)}</h3><p>${esc(g.synopsis.length>150?g.synopsis.slice(0,150).replace(/\s\S*$/,"")+"…":g.synopsis)}</p>${tags(g.tags)}<p><strong style="color:var(--tx)">My role:</strong> ${esc(g.cardRole)}</p><a class="btn" href="#/project/${g.id}" aria-label="View project: ${esc(g.title)}">View Project</a></div></article>`).join("")}</div></section>
+<section id="software"><div class="two"><div class="pn"><h2 style="font-size:1.4rem">Software</h2><div class="sw">${SOFT.map(([n,s])=>`<div><img src="${s}" alt="${n} logo" loading="lazy">${n}</div>`).join("")}</div></div>
+<div class="pn" id="contact"><h2 style="font-size:1.4rem">Contact</h2><p><a href="mailto:${SITE.email}">${SITE.email}</a><br>${SITE.phone}</p>
+<div class="tags" style="gap:8px"><a class="btn sm" href="${SITE.cv}" download>Download CV</a><a class="btn s sm" href="${SITE.linktree}" target="_blank" rel="noopener">Linktree</a><a class="btn s sm" href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn</a></div>
+<p style="margin-top:12px;font-size:.9rem;color:var(--mut)">Press start on a conversation any time!</p></div></div></section>`;
+}
+const sec=(t,c)=>`<section class="sec"><h2>${t}</h2>${c}</section>`;
+function project(g){
+ const id=ytId(g.demoUrl);
+ main.innerHTML=`<a class="back" href="#projects">← Back to all projects</a>
+<div class="frame"><img src="${g.image}" alt="${esc(g.alt)}" style="max-height:520px;object-fit:contain;background:#050816"><div class="ph"><p class="eyebrow">Poster, title &amp; credits</p><h1>${esc(g.title)}</h1>${tags(g.heroTags)}<p class="team">${esc(g.team)}</p></div></div>
+${sec("Game Synopsis",`<div class="pn"><p>${esc(g.synopsis)}</p></div>`)}
+${sec("Project Brief",`<div class="pn"><p>${esc(g.brief)}</p></div>`)}
+${sec("My Role &amp; Contributions",`<div class="pn"><p>${esc(g.role)}</p></div>`)}
+${sec("Game Demo Video",`<div class="split"><div class="vid" id="vid"><img src="${g.image}" alt="${esc(g.title)} demo video thumbnail"><button class="play" aria-label="Play the ${esc(g.title)} demo"><span>▶</span></button></div>
+<div><p>Watch the ${esc(g.title)} gameplay demo.</p><p><a class="btn" href="${g.demoUrl}" target="_blank" rel="noopener">Watch on YouTube</a></p><p style="font-size:.9rem">Link: <a href="${g.demoUrl}" target="_blank" rel="noopener">${g.demoUrl}</a></p><img class="qr" src="qr/${g.id}-demo.png" alt="QR code linking to the ${esc(g.title)} demo video"></div></div>`)}
+${sec("Game Download",`<div class="pn split"><div><p>Download ${esc(g.title)} from itch.io.</p><p><a class="btn" href="${g.downloadUrl}" target="_blank" rel="noopener">Download Game</a></p><p style="font-size:.9rem">Available on itch.io: <a href="${g.downloadUrl}" target="_blank" rel="noopener">${g.downloadUrl}</a></p></div><img class="qr" src="qr/${g.id}-download.png" alt="QR code linking to the ${esc(g.title)} download page"></div>`)}`;
+ $(".play").onclick=()=>{$("#vid").innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1" title="${esc(g.title)} demo" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`};
+}
+function route(){
+ const m=location.hash.match(/^#\/project\/([\w-]+)$/),g=m&&GAMES.find(x=>x.id===m[1]);
+ if(g){project(g);document.title=g.title+" | Kai Studios";scrollTo(0,0)}
+ else{const t=location.hash;home();document.title="Kai Studios | Game Design & Development Portfolio";if(t&&!t.startsWith("#/")){const e=document.querySelector(t);e?e.scrollIntoView():scrollTo(0,0)}else scrollTo(0,0)}
+}
+$("#yr").textContent=new Date().getFullYear();
+$("#burger").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+$("#nav").onclick=e=>{if(e.target.tagName==="A"){$("#nav").classList.remove("open");$("#burger").setAttribute("aria-expanded","false")}};
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>

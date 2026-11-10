@@ -38,6 +38,7 @@ section{padding:60px 0}
 .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .frame{border:2px solid var(--line);border-radius:20px;overflow:hidden;background:var(--bg);box-shadow:0 16px 50px rgba(30,40,160,.45)}
 .frame img{display:block;width:100%;height:auto}
+.logo-hero{display:block;width:100%;height:auto;max-width:560px;justify-self:center;animation:bob 6s ease-in-out infinite}
 .hero .frame{animation:bob 6s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px}
@@ -201,7 +202,7 @@ function home(){
  <h1>${SITE.greeting}</h1>
  <p id="about">${esc(SITE.intro1)}</p><p>${esc(SITE.intro2)}</p>
  <div class="cta"><a class="btn" href="#projects">Explore My Projects</a><a class="btn s" href="${SITE.cv}" download>Download CV</a></div></div>
- <div class="frame"><img src="${GAMES[0].image}" alt="${esc(GAMES[0].alt)}"></div></section>
+ <img class="logo-hero" src="images/logo.png" alt="Kai Studios logo"></section>
 <section id="projects"><h2>Project Gallery</h2><div class="grid">
 ${GAMES.map(g=>`<article class="card"><img src="${g.image}" alt="${esc(g.alt)}" loading="lazy"><div class="body"><h3>${esc(g.title)}</h3><p>${esc(g.synopsis.length>150?g.synopsis.slice(0,150).replace(/\s\S*$/,"")+"…":g.synopsis)}</p>${tags(g.tags)}<p><strong style="color:var(--tx)">My role:</strong> ${esc(g.cardRole)}</p><a class="btn" href="#/project/${g.id}" aria-label="View project: ${esc(g.title)}">View Project</a></div></article>`).join("")}</div></section>
 <section id="software"><div class="two"><div class="pn"><h2 style="font-size:1.4rem">Software</h2><div class="sw">${SOFT.map(([n,s])=>`<div><img src="${s}" alt="${n} logo" loading="lazy">${n}</div>`).join("")}</div></div>
